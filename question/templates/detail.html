@@ -3,12 +3,12 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>问题详情</title>
+    <title>{{ question.content }}详情</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="fly,layui,前端社区">
+    <meta name="keywords" content="{{ question.content }}">
     <meta name="description"
-          content="">
+          content="{{ question.content }}">
     <link rel="stylesheet" href="{% static 'layui/css/layui.css' %}">
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
     <script src="{% static 'layui/layui.js' %}"></script>
@@ -184,38 +184,9 @@
 
             <div class="edge">
                 <dl class="fly-panel fly-list-one">
-                    <dt class="fly-panel-title">猜你喜欢</dt>
+                    <dt class="fly-panel-title">猜你想看</dt>
                     <dd>
-                        <a href="">使用 layui 秒搭后台大布局（基本结构）</a> <span><i
-                            class="iconfont">&#xe60b;</i> 6087</span>
-                    </dd>
-                    <dd>
-                        <a href="">Java实现LayIM后端的核心代码</a> <span><i class="iconfont">&#xe60b;</i>
-						767</span>
-                    </dd>
-                    <dd>
-                        <a href="">使用 layui 秒搭后台大布局（基本结构）</a> <span><i
-                            class="iconfont">&#xe60b;</i> 6087</span>
-                    </dd>
-                    <dd>
-                        <a href="">Java实现LayIM后端的核心代码</a> <span><i class="iconfont">&#xe60b;</i>
-						767</span>
-                    </dd>
-                    <dd>
-                        <a href="">使用 layui 秒搭后台大布局（基本结构）</a> <span><i
-                            class="iconfont">&#xe60b;</i> 6087</span>
-                    </dd>
-                    <dd>
-                        <a href="">Java实现LayIM后端的核心代码</a> <span><i class="iconfont">&#xe60b;</i>
-						767</span>
-                    </dd>
-                    <dd>
-                        <a href="">使用 layui 秒搭后台大布局（基本结构）</a> <span><i
-                            class="iconfont">&#xe60b;</i> 6087</span>
-                    </dd>
-                    <dd>
-                        <a href="">Java实现LayIM后端的核心代码</a> <span><i class="iconfont">&#xe60b;</i>
-						767</span>
+                        <a href="">使用 layui 秒搭后台大布局（基本结构）</a>
                     </dd>
                 </dl>
             </div>

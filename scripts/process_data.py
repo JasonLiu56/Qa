@@ -36,7 +36,7 @@ def extract_tags(qa_file='D:/BaiduNetdiskDownload/zhidao_qa.json'):
         for tag_item in tag_dict.items():
             content = tag_item[0]
             id_ = tag_item[1]
-            add_time = datetime.strftime(datetime.fromtimestamp(time.time()), '%Y-%m-%d %H:%M:%S')
+            add_time = datetime.strftime(datetime.fromtimestamp(time.time()), '%d/%m/%Y %H:%M:%S')
             fw.write('{}\t{}\t{}\n'.format(id_, content, add_time))
 
 
@@ -66,8 +66,8 @@ def extract_question_answers(qa_file='D:/BaiduNetdiskDownload/zhidao_qa.json'):
 
                 id_ = question_id
                 content = re.sub('\t', '', question)
-                add_date = datetime.strftime(datetime.fromtimestamp(question_time), '%Y-%m-%d')
-                add_time = datetime.strftime(datetime.fromtimestamp(question_time), '%Y-%m-%d %H:%M:%S')
+                add_date = datetime.strftime(datetime.fromtimestamp(question_time), '%d/%m/%Y')
+                add_time = datetime.strftime(datetime.fromtimestamp(question_time), '%d/%m/%Y %H:%M:%S')
                 tag_id = tag_dict[tags[0]]
                 username = fake.name()
                 question_avatar_index = random.randint(0, 13)
@@ -91,7 +91,7 @@ def extract_question_answers(qa_file='D:/BaiduNetdiskDownload/zhidao_qa.json'):
                     username = fake.name()
                     email = fake.email()
                     content = answer
-                    add_time = datetime.strftime(datetime.fromtimestamp(answer_time), '%Y-%m-%d %H:%M:%S')
+                    add_time = datetime.strftime(datetime.fromtimestamp(answer_time), '%d/%m/%Y %H:%M:%S')
                     answer_avatar_index = random.randint(0, 13)
                     liked_num = random.randint(500, 2000)
 
@@ -115,7 +115,7 @@ def extract_question_answers(qa_file='D:/BaiduNetdiskDownload/zhidao_qa.json'):
                     'add_time': q_add_time_list,
                     'tag_id': q_tag_id_list,
                     'username': q_username_list,
-                    'question_avatar_index': q_avatar_index_list
+                    'avatar_index': q_avatar_index_list
                 })
                 question_df.to_csv('./data/question_{}.csv'.format(file_count), index=False)
 
@@ -126,7 +126,7 @@ def extract_question_answers(qa_file='D:/BaiduNetdiskDownload/zhidao_qa.json'):
                     'content': a_content_list,
                     'question_id': aq_id_list,
                     'add_time': a_add_time_list,
-                    'answer_avatar_index': a_avatar_index_list,
+                    'avatar_index': a_avatar_index_list,
                     'liked_num': a_liked_num_list,
                 })
                 answer_df.to_csv('./data/answer_{}.csv'.format(file_count), index=False)
