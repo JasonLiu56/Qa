@@ -83,7 +83,7 @@ if __name__ == '__main__':
     # print(is_success)
     # data = elastic_search.get_data('ty4CMX0BkRlCeuClt7w6')
     # print(data)
-    data_list = elastic_search.search('谁')
+    data_list = elastic_search.search('喜欢一个人什么感觉')
     print(data_list)
 
 
