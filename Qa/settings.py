@@ -133,3 +133,9 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# tensorflow serving服务配置
+MODEL_HOST = '192.168.0.81'
+MODEL_PORT = 8500
+COMMON_SIM_MODEL_NAME = 'common_sim_model'
+
